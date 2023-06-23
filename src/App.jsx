@@ -5,11 +5,11 @@ import { TodoList } from "./TodoList";
 export default function App() {
   const [todos, setTodos] = useState([]);
 
-  function addTodo(title){
+  function addTodo(title) {
     setTodos(currentTodos => {
       return [
         ...currentTodos,
-        { id: crypto.randomUUID(), title, completed:false},
+        { id: crypto.randomUUID(), title, completed: false },
       ]
     })
   }
@@ -34,9 +34,9 @@ export default function App() {
 
   return (
     <>
-      <NewTodoForm onSubmit={addTodo}/>
+      <NewTodoForm onSubmit={addTodo} />
       <h1 className="header">Todo List</h1>
-      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>
+      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
     </>
   )
 }
