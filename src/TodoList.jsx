@@ -1,3 +1,5 @@
+import { TodoItem } from "./TodoItem"
+
 export function TodoList({ todos }) {
     return (
         <ul className="list">
